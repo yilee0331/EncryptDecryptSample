@@ -23,7 +23,7 @@ namespace EncryptLibrary
                 {
                     using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write))
                     {
-                        cs.Write(clearBytes, 0, clearBytes.Length);
+                        cs.Write(clearBytes, 0 , clearBytes.Length);
                         cs.Close();
                     }
                     clearText = Convert.ToBase64String(ms.ToArray());
